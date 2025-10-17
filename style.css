@@ -21,7 +21,7 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   background-color: var(--primario);
   padding: 1rem 2rem;
@@ -42,8 +42,6 @@ body {
   gap: 2rem;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
-  white-space: nowrap;
 }
 
 .nav-links li {
@@ -173,8 +171,8 @@ section {
 }
 
 .card img {
-  width: 80%;
-  height: 240px;        
+  width: 90%;
+  height: 260px;        
   object-fit: cover;    
   border-radius: 15px 15px 0 0;
 }
@@ -291,3 +289,5 @@ footer {
     height: 250px;
   }
 }
+
+
