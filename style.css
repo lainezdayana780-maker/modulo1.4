@@ -1,0 +1,293 @@
+/* ======================= */
+/* Paleta floral */
+:root {
+  --primario: #d88fb3;
+  --secundario: #f2c6de;
+  --claro: #fff8f0;
+  --verde: #c7e8c2;
+  --oscuro: #333;
+}
+
+/* ======================= */
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--claro);
+  color: var(--oscuro);
+}
+
+/* ======================= */
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: var(--primario);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--verde);
+  transform: scale(1.05);
+}
+
+/* ======================= */
+/* Carrusel */
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  width: 100%;
+  display: none;
+  height: 500px;
+  position: relative;
+}
+
+.carousel-slide.active {
+  display: block;
+  animation: fade 1s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0,0,0,0,0);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ======================= */
+/* Secciones */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* ======================= */
+/* Sobre Nosotros */
+.empresa .info-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+}
+
+.info-card img {
+  width: 60px;
+  height: 60px;
+}
+
+.info-card h3 {
+  margin-top: 1rem;
+  color: var(--primario);
+}
+
+/* ======================= */
+/* Productos */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 260px;         
+  height: 380px;        
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 80%;
+  height: 240px;        
+  object-fit: cover;    
+  border-radius: 15px 15px 0 0;
+}
+
+.card h3 {
+  margin: 0.8rem 0;
+  color: var(--primario);
+}
+
+.card p {
+  padding: 0 1rem 1rem 1rem;
+}
+
+/* ======================= */
+/* Formulario */
+.contacto p.contacto-desc {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-group {
+  width: 80%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+button {
+  background-color: var(--primario);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--secundario);
+  color: var(--oscuro);
+}
+
+/* ======================= */
+/* Footer */
+footer {
+  background-color: var(--primario);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ======================= */
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .carousel-slide {
+    height: 350px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.8rem;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .carousel-slide {
+    height: 250px;
+  }
+}
